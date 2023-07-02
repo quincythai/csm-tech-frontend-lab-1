@@ -1,3 +1,5 @@
+# [Lab Specifications](https://www.notion.so/Lab-1-Resource-Recreation-9ed5ea36b515490b9668fa5df12241b5)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
