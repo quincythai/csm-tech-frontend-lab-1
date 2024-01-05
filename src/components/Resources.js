@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import get from "../utils/api";
+import Navbar from "./Navbar";
+import Table from "./Table";
 
 function Resources() {
-  console.log(get("/resources/1"));
-  console.log(get("/courses"));
-  return <div>Create more components to render data</div>;
+  const classes = get("/courses");
+  const [id, setID] = useState(1);
+
+  return (
+    <>
+      <Navbar classes={classes} onCourseSelect={setID} />
+      <Table id={id} />
+    </>
+  );
 }
 
 export default Resources;
