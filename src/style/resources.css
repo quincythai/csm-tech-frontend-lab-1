@@ -1,0 +1,84 @@
+:root {
+  --csm-green: #9ae0b3;
+  --csm-green-darkened: #75b38a;
+  --csm-neutral: #c0c0c0;
+  --csm-neutral-darkened: #b6b6b6;
+  --csm-resources: #ededed;
+}
+
+/* Preferred not to put spacing on body? Instead put on components separately as margin */
+/* Since the entire thing is a Resource component, just add spacing on that */
+.resourceContainer {
+  margin: 0 20px;
+}
+
+/* Navbar */
+nav {
+  margin: 20px 0;
+}
+
+/* Navbar buttons */
+.tab {
+  color: white;
+  font-weight: bold;
+  background-color: var(--csm-neutral);
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px;
+}
+
+/* In Navbar.js, we had JS code that checked if the current id matched with the Navbar
+button's id, and if so we had the component have both the .tab and .active class, and we
+can use the two classes connected together to style components that have both classes */
+.tab.active {
+  background-color: var(--csm-green);
+}
+
+.tab.active:hover {
+  background-color: var(--csm-green-darkened);
+}
+
+.tab:hover {
+  background-color: var(--csm-neutral-darkened);
+}
+
+/* Header */
+.header {
+  font-weight: bold;
+}
+
+/* Row */
+.rowContainer,
+.header {
+  display: flex;
+  padding: 30px 40px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.rowContainer {
+  background-color: var(--csm-resources);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  margin: 16px auto;
+}
+
+/* Table */
+.table {
+  margin: auto; /* better than just setting 0 20px because we don't want it stretched */
+  max-width: 1064px; /* combine margin with max-width to maintain size */
+}
+
+.header {
+  display: flex;
+  font-style: bold;
+}
+
+.smallCol {
+  flex: 1;
+}
+
+.bigCol {
+  flex: 1.5;
+}

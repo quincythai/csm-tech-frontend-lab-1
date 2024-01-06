@@ -1,13 +1,13 @@
 import React from "react";
+import "../style/resources.css";
+
 const Row = ({ weekNum, date, topics, worksheet }) => {
   return (
-    <div>
-      <ul>
-        <li>Week {weekNum}</li>
-        <li>{date}</li>
-        <li>{topics}</li>
-        <li>{worksheet}</li>
-      </ul>
+    <div className="rowContainer">
+      <div className="smallCol">Week {weekNum}</div>
+      <div className="smallCol">{date}</div>
+      <div className="bigCol">{topics}</div>
+      <div className="bigCol">{worksheet}</div>
     </div>
   );
 };
